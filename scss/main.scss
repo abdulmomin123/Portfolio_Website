@@ -1,0 +1,411 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 1rem 1.5rem;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+        padding-bottom: 0.5rem;
+        transition: border-color 0.5s;
+
+        &:hover {
+          border-color: $medium-color;
+        }
+
+        &.current {
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+}
+// Header
+#header {
+  // Header Home
+  &-home {
+    background: $bg-img no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+
+    // Header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  // Header Inner
+  &-inner {
+    background: $bg-img no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+// Home Section
+#home {
+  // Section A:
+  &-a {
+    .specials {
+      display: grid;
+      gap: 1rem;
+      margin-top: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      .fas {
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+    }
+  }
+
+  // Section B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      div {
+        padding: 3rem 0;
+
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+
+  // Home Seciton: C
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+
+      // Process: icons
+      &-icon {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        border-radius: 50%;
+        padding: 2rem;
+        text-align: center;
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          & > div {
+            background: $dark-color;
+          }
+        }
+      }
+
+      // Process: steps
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        font-size: 28px;
+        text-align: center;
+        line-height: 15px;
+        padding: 1rem;
+        background: $main-color;
+        color: set-text-color($main-color);
+        transition: all 1s;
+      }
+    }
+  }
+}
+
+// About Sections
+#about {
+  // About A
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "aw-1 aw-2 aw-3";
+      gap: 1.2rem;
+
+      // Grid Areas
+      & > *:first-child {
+        grid-area: bioimage;
+      }
+
+      & > *:nth-child(2) {
+        grid-area: bio;
+        border-left: 3px solid $main-color;
+        padding: 0.8rem;
+      }
+
+      & > *:nth-child(3) {
+        grid-area: aw-1;
+      }
+      & > *:nth-child(4) {
+        grid-area: aw-2;
+      }
+      & > *:last-child {
+        grid-area: aw-3;
+      }
+
+      .award-1 .fas,
+      .award-2 .fas,
+      .award-3 .fas {
+        color: $main-color;
+        margin: 1rem;
+      }
+    }
+  }
+
+  // About B
+  &-b {
+    .progress {
+      overflow: hidden;
+      width: 100%;
+      height: 20px;
+      background: $medium-color;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+
+      & > div {
+        height: 100%;
+        color: #fff;
+        background: $main-color;
+        text-align: center;
+      }
+    }
+  }
+
+  // About C
+  &-c {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  // About D
+  &-d {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        border: 1px solid $medium-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Contact Page
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name subject"
+        "email phone"
+        "message message";
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid areas
+      .name-input {
+        grid-area: name;
+      }
+
+      .subject-input {
+        grid-area: subject;
+      }
+
+      .email-input {
+        grid-area: email;
+      }
+
+      .phone-input {
+        grid-area: phone;
+      }
+
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input {
+        padding: 0.5rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        outline: none;
+
+        &:focus {
+          border: 1px solid $main-color;
+          transition: all 400ms;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      width: 50%;
+      border-radius: 5px;
+    }
+  }
+
+  // Contact B: Info
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Contact C
+  &-c {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+}
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: $light-color;
+  height: 4rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+
+    .social .fab {
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      text-align: center;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: all 0.5s;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
+  }
+}
+
+// Import Media Queries
+@import "media";
