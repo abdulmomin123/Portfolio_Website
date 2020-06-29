@@ -296,7 +296,7 @@ img {
 
 #about-a .about-info {
   display: grid;
-  grid-template-areas: "bioimage bio bio" "aw-1 aw-2 aw-3";
+  grid-template-areas: "bioimage bio bio" "aw-1 aw-2 aw-3";
   gap: 1.2rem; }
   #about-a .about-info > *:first-child {
     grid-area: bioimage; }
@@ -357,7 +357,7 @@ img {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: "name subject" "email phone" "message message";
+  grid-template-areas: "name subject" "email phone" "message message";
   gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-a .text-fields .name-input {
@@ -455,11 +455,11 @@ img {
   #home-b .stats div {
     padding: 2rem 0 1rem 0; }
   #about-a .about-info {
-    grid-template-areas: "bioimage" "bio" "aw-1" "aw-2" "aw-3"; }
+    grid-template-areas: "bioimage" "bio" "aw-1" "aw-2" "aw-3"; }
   #about-c {
     display: none; }
   #contact-a .text-fields {
-    grid-template-areas: "name" "subject" "email" "phone" "message"; }
+    grid-template-areas: "name" "subject" "email" "phone" "message"; }
   #contact-b .contact-info {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem; }
