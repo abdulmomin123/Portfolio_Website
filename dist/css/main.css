@@ -412,6 +412,7 @@ img {
       padding: 0.5rem;
       text-align: center;
       border: 2px solid #fff;
+      color: #fff;
       border-radius: 50%;
       transition: all 0.5s; }
       #main-footer .footer-content .social .fab:hover {
