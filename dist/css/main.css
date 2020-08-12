@@ -1,8 +1,7 @@
 .container {
   max-width: 1280px;
   margin: auto;
-  padding: 0 1.5rem;
-  overflow: hidden; }
+  padding: 0 1.5rem; }
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
@@ -93,13 +92,13 @@ input[class^="btn-"]:hover {
 .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   gap: 1rem; }
   .items .item {
     position: relative;
     background: #ffbc00;
     overflow: hidden;
-    border-radius: 20px; }
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); }
     .items .item::after {
       content: "";
       position: absolute;
@@ -296,7 +295,7 @@ img {
 
 #about-a .about-info {
   display: grid;
-  grid-template-areas: "bioimage bio bio" "aw-1 aw-2 aw-3";
+  grid-template-areas: "bioimage bio bio" "aw-1 aw-2 aw-3";
   gap: 1.2rem; }
   #about-a .about-info > *:first-child {
     grid-area: bioimage; }
@@ -357,7 +356,7 @@ img {
 
 #contact-a .text-fields {
   display: grid;
-  grid-template-areas: "name subject" "email phone" "message message";
+  grid-template-areas: "name subject" "email phone" "message message";
   gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-a .text-fields .name-input {
@@ -455,11 +454,11 @@ img {
   #home-b .stats div {
     padding: 2rem 0 1rem 0; }
   #about-a .about-info {
-    grid-template-areas: "bioimage" "bio" "aw-1" "aw-2" "aw-3"; }
+    grid-template-areas: "bioimage" "bio" "aw-1" "aw-2" "aw-3"; }
   #about-c {
     display: none; }
   #contact-a .text-fields {
-    grid-template-areas: "name" "subject" "email" "phone" "message"; }
+    grid-template-areas: "name" "subject" "email" "phone" "message"; }
   #contact-b .contact-info {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem; }
